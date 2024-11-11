@@ -1,16 +1,16 @@
-Khai triển $\left( x-2y \right) ^2$ ta được kết quả
+Câu 1 Khai triển $\left( x-2y \right) ^2$ ta được kết quả
 A. $x^2+2xy+4y^2$. 	
 B. $x^2-2xy+4y^2$.
 C.  $x^2-4xy+4y^2$. *	
 D. $x^2+4xy+4y^2$.
 /#
-Khai triển $\left( 9x^2+1 \right) ^2$ ta được kết quả
+Câu 2 Khai triển $\left( 9x^2+1 \right) ^2$ ta được kết quả
 A. $81x^4-18x^2+1$. 	
 B. $81x^4-36x^2+1$.
 C.  $81x^4+18x^2+1$. *	
 D. $81x^4+36x^2+1$.
 /#
-Biểu thức $\left( 5x-\frac{8y}{3} \right) \left( 5x+\frac{8y}{3} \right) $ bằng
+Câu 3 Biểu thức $\left( 5x-\frac{8y}{3} \right) \left( 5x+\frac{8y}{3} \right) $ bằng
 A. $25x^2-\frac{64y^2}{9}-1$. 	
 B. $25x^2+\frac{64y^2}{9}$. 	
 C. $25x^2-\frac{64y^2}{9}+1$. 	
