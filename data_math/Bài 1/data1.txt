@@ -1,156 +1,42 @@
-Câu 1 Khai triển $\left( x-2y \right) ^2$ ta được kết quả
-A. $x^2+2xy+4y^2$. 	
-B. $x^2-2xy+4y^2$.
-C.  $x^2-4xy+4y^2$. *	
-D. $x^2+4xy+4y^2$.
+Câu 1. Biểu thức nào là đơn thức?
+A. ${- 4 x + 5 y^{8}}$.	   
+B. ${- 4 x^{8} y^{5}}$. *    
+C. ${- 4 \sqrt{x}} $.	     
+D. ${x^{12} - y^{9}}$.
 /#
-Câu 2 Khai triển $\left( 9x^2+1 \right) ^2$ ta được kết quả
-A. $81x^4-18x^2+1$. 	
-B. $81x^4-36x^2+1$.
-C.  $81x^4+18x^2+1$. *	
-D. $81x^4+36x^2+1$.
+Câu 2. Chọn khẳng định sai.
+A. $y^{2}. *7 x^{7} y^{10} = x^{7}y^{18}$.	   
+B. $3 x^{10}.17x^{7} y^{10} z^{8} = 51 x^{17} y^{10} z^{8}$.    
+C. $- z^{7}.y^{3}8x^{20}17x^{7} y^{10} = - 136 x^{27} y^{13} z^{7} $.	     
+D. $10 x^{4}.8x^{2} =80 x^{6}$.
 /#
-Câu 3 Biểu thức $\left( 5x-\frac{8y}{3} \right) \left( 5x+\frac{8y}{3} \right) $ bằng
-A. $25x^2-\frac{64y^2}{9}-1$. 	
-B. $25x^2+\frac{64y^2}{9}$. 	
-C. $25x^2-\frac{64y^2}{9}+1$. 	
-D.  $25x^2-\frac{64y^2}{9}$.*
+Câu 3. Chọn khẳng định sai:
+A. $- 9 x^{3} y+3 x^{3} y =- 6 x^{3} y$.	   
+B. $- 7 x y^{8} z^{2}+9 x y^{8} z^{2} =2 x y^{8} z^{2} $.    
+C. $x^{3}+ 7 x^{3} = - 7 x^{3}$. *	     
+D. $x^{3}- 7 x^{3} = - 6 x^{3}$.
 /#
-Câu 4. Biểu thức $25x^2+40xy+16y^2$ bằng
-A. $\left( 6x+4y \right) ^4$. 	
-B. $\left( 6x+5y \right) ^2$.
-C. $\left( 5x+5y \right) ^2$. 	
-D. $\left( 5x+4y \right) ^2$.*
+Câu 4. Tìm bậc của đơn thức $2 x^{3} y^{8} z^{3}.x^{8} y^{3}$ 
+A. ${17}$.	   
+B. ${22}$ .	    
+C. ${25}$ . *	     
+D. ${14}$.
 /#
-Câu 5. Biểu thức $x^4+8x^2y+16y^2$ bằng
-A. $\left( x^2+4y \right) ^2$.*	
-B. $\left( x^2+2y \right) ^2$.
-C. $\left( 2x^2+4y \right) ^2$. 	
-D. $\left( x^2+5y \right) ^2$.
+Câu 5. Tính giá trị của đơn thức $x y z^{2}$ tại $x=-1$, $y=1$, $z=1$ 
+A. ${-2}$.	   
+B. ${-1}$ . *	    
+C. ${1}$.	     
+D. ${0}$ .
 /#
-Câu 6. Rút gọn biểu thức sau $\left( 2x-3 \right) ^2+\left( 2x+3 \right) ^2$
-A. $8x^2+21$. 	
-B.  $8x^2+18$.*
-C. $8x^2+25$. 	
-D. $8x^2+16$.
+Câu 6. Khẳng định nào sai:
+A. $4 x^{7} y^{5}+6 x^{7} y^{5}-4 x^{7} y^{5}-7 x^{7} y^{5} = - x^{7} y^{5}$ .	   
+B. $x^{6} x^{4} y^{5}-18 x^{10} y^{5}= - 17 x^{10} y^{5}$.    
+C. $10 x^{5} y^{6}+28 x^{5} y^{6} = 20 x^{5} y^{6} $. *	     
+D. $10 x^{5} y^{6}+28 x^{5} y^{6}-18 x^{5} y^{6} = 20 x^{5} y^{6} $.
 /#
-Câu 7. Rút gọn biểu thức sau $\left( -x-5y \right) ^2+\left( 5x+5y \right) ^2$
-A.  $26x^2+60xy+50y^2$.*	
-B. $26x^2+60xy+50y^2+9$.
-C. $26x^2+60xy+50y^2+3$. 	
-D. $26x^2+60xy+50y^2-2$.
-/#
-Câu 8. Thực hiện phép tính $x\left( 1-x \right) +\left( x-1 \right) ^2$ bằng
-A. $-x-1$. 	
-B. $1-x$.*
-C. $1$. 	
-D. $3x+1$.
-/#
-Câu 9. Thực hiện phép tính $\left( x-4 \right) \left( x+5 \right) +\left( x-3 \right) ^2$ bằng
-A. $2x^2+3x-11$. 	
-B. $2x^2+7x-11$. 	
-C. $2x^2-5x+29$. 	
-D. $2x^2-5x-11$.*
-/#
-Câu 10. Thu gọn $\left( x-4y \right) ^2+\left( x-4y \right) \left( 12x+2y \right) +\left( 6x+y \right) ^2$ bằng
-A. $\left( 7x-3y+2 \right) ^2$. 	
-B. $\left( 7x-3y \right) ^2$.*
-C. $\left( 7x-3y-3 \right) ^2$. 	
-D. $\left( 7x-3y+5 \right) ^2$.
-/#
-Câu 11. Tìm $x$ biết $x^2-36=0$
-A.  $x=6$ hoặc $x=-6$.*	
-B. $x=6$ hoặc $x=-8$.
-C. $x=9$ hoặc $x=-10$. 	
-D. $x=4$ hoặc $x=-8$.
-/#
-Câu 12. Tìm $x$ biết $9x^2-1=0$
-A. $x=-\frac{11}{3}$ hoặc $x=-\frac{10}{3}$. 	
-B.  $x=\frac{1}{3}$ hoặc $x=-\frac{1}{3}$.*
-C. $x=-\frac{5}{3}$ hoặc $x=-\frac{4}{3}$. 	
-D. $x=\frac{13}{3}$ hoặc $x=-\frac{13}{3}$.
-/#
-Câu 13. Tìm $x$ biết $\left( x+2 \right) ^2-9=0$
-A. $x=5$ hoặc $x=-8$. 	
-B.  $x=1$ hoặc $x=-5$.*
-C. $x=5$ hoặc $x=-3$. 	
-D. $x=0$ hoặc $x=-6$.
-/#
-Câu 14. Tìm $x$ biết $-36x^2+\left( 2x-8 \right) ^2=0$
-A. $x=1$ hoặc $x=0$. 	
-B. $x=2$ hoặc x=5. 
-C.  $x=-2$ hoặc $x=1$.*	
-D. $x=-3$ hoặc $x=0$.
-/#
-Câu 15. Giá trị lớn nhất của biểu thức $A=27-x^2$ là
-A. $39$. 	
-B. $30$. 	
-C. $27$.*	
-D. $23$.
-/#
-Câu 16. Giá trị lớn nhất của biểu thức $A=9-\left( 2-8x \right) ^2$ là
-A. $-3$. 	
-B. $9$.*	
-C. $15$. 	
-D. $4$.
-/#
-Câu 17. Giá trị nhỏ nhất của biểu thức $B=x^2-16x+54$ là
-A. $-20$. 	
-B. $-10$.*	
-C. $-2$. 	
-D. $-11$.
-/#
-Câu 18. Giá trị nhỏ nhất của biểu thức $\left( x+2 \right) \left( x+6 \right) +7$ là
-A. $1$. 	
-B. $14$. 	
-C. $10$. 	
-D. 3.*
-/#
-Câu19.Khi$x=a,y=b\mathrm{ }$thì$\mathrm{ }x^2+6x+y^2+10=2y$.Tính$\mathrm{ }a+b$
-A.  $-2$.*	
-B. $-8$. 	
-C. $14$. 	
-D. $2$.
-/#
-Câu 20. Chọn khẳng định đúng trong các khẳng định sau:
-A.  $\left( 4n-6 \right) ^2-36$ chia hết cho $4$ với mọi $n\in \mathbb{Z} $.* 	
-B. $\left( 6n+9 \right) ^2-81$ không chia hết cho $6$ với mọi $n\in \mathbb{Z} $.
-C. $\left( 3n-6 \right) ^3+216$ không chia hết cho $3$ với mọi $n\in \mathbb{Z} $. 	
-D. $\left( 4n-6 \right) ^2-36$ không chia hết cho $4$ với mọi $n\in \mathbb{Z} $.
-/#
-Câu 21. Khai triển biểu thức sau theo hằng đẳng thức $\left( 5-4x \right) ^3$ bằng
-A. $64x^3+240x^2+300x+125$. 	
-B. $-64x^3-240x^2-300x+125$.
-C. $-64x^3+240x^2-300x+125$.*	
-D. $-64x^3+240x^2+300x+125$.
-/#
-Câu 22. Biểu thức $-8x^3+48x^2-96x+64$ bằng
-A.  $\left( 4-2x \right) ^3$.*	
-B. $-8x^3$.
-C. $\left( -2x-5 \right) ^3$. 	
-D. $\left( 1-2x \right) ^3$.
-/#
-Câu 23. Rút gọn biểu thức sau $\left( x-y \right) ^3+\left( x+y \right) ^3$
-A. $2x^3-3xy^2$. 	
-B. $2x^3+5xy^2$.
-C. $2x^3-6xy^2$. 	
-D. $2x^3+6xy^2$.*
-/#
-Câu 24. Rút gọn biểu thức sau $-x^2\left( x+1 \right) +\left( x+\frac{1}{3} \right) ^3$
-A. $\frac{x}{3}-\frac{1}{27}$. 	
-B.  $\frac{x}{3}+\frac{1}{27}$.*
-C. $\frac{x}{9}+\frac{1}{27}$. 	
-D. $\frac{x}{9}-\frac{1}{27}$.
-/#
-Câu 25. Rút gọn biểu thức $6x^2-x\left( x-2 \right) \left( x+2 \right) +\left( x-2 \right) ^3+8$ được
-A. $4x$. 	
-B. $-16x$.
-C. $-4x$. 	
-D.  $16x$.*
-/#
-Câu 26. Rút gọn biểu thức sau $\left( x-y \right) ^3+\left( x+y \right) ^3$
-A. $2x^3-6xy^2$. 	
-B. $2x^3-4xy^2$.
-C. $2x^3+4xy^2$. 	
-D. $2x^3+6xy^2$.*
+Câu 7. Tìm phần hệ số và phần biến của đơn thức ${- 5 x^{9} y^{9} z^{10}} \cdot 8 x^{9} y^{9} z^{10}$.
+A. Phần hệ số là ${-40}$ và phần biến là ${x^{18} y^{9} z^{20}}$.   
+B. Phần hệ số là ${-5}$ và phần biến là ${x^{18} y^{9} z^{20}}$.    
+C. Phần hệ số là ${-40}$ và phần biến là ${x^{18} y^{18} z^{20}}$. *     
+D. Phần hệ số là ${8}$ và phần biến là ${x^{18} y^{18} z^{10}}$. 
 /#

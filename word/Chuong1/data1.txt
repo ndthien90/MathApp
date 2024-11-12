@@ -1,0 +1,58 @@
+
+/#
+Câu 1. Biểu thức nào là đơn thức?
+A. ${- 4 x + 5 y^{8}}$.	   
+B. ${- 4 x^{8} y^{5}}$. *    
+C. ${- 4 \sqrt{x}} $.	     
+D. ${x^{12} - y^{9}}$.
+/#
+Câu 2. Chọn khẳng định sai.
+A. $y^{2}. *7 x^{7} y^{10} = x^{7}y^{18}$.	   
+B. $3 x^{10}.17x^{7} y^{10} z^{8} = 51 x^{17} y^{10} z^{8}$.    
+C. $- z^{7}.y^{3}8x^{20}17x^{7} y^{10} = - 136 x^{27} y^{13} z^{7} $.	     
+D. $10 x^{4}.8x^{2} =80 x^{6}$.
+/#
+Câu 3. Chọn khẳng định sai:
+A. $- 9 x^{3} y+3 x^{3} y =- 6 x^{3} y$.	   
+B. $- 7 x y^{8} z^{2}+9 x y^{8} z^{2} =2 x y^{8} z^{2} $.    
+C. $x^{3}+ 7 x^{3} = - 7 x^{3}$. *	     
+D. $x^{3}- 7 x^{3} = - 6 x^{3}$.
+/#
+Câu 4. Tìm bậc của đơn thức $2 x^{3} y^{8} z^{3}.x^{8} y^{3}$ 
+A. ${17}$.	   
+B. ${22}$ .	    
+C. ${25}$ . *	     
+D. ${14}$.
+/#
+Câu 5. Tính giá trị của đơn thức $x y z^{2}$ tại $x=-1$, $y=1$, $z=1$ 
+A. ${-2}$.	   
+B. ${-1}$ . *	    
+C. ${1}$.	     
+D. ${0}$ .
+/#
+Câu 6. Khẳng định nào sai:
+A. $4 x^{7} y^{5}+6 x^{7} y^{5}-4 x^{7} y^{5}-7 x^{7} y^{5} = - x^{7} y^{5}$ .	   
+B. $x^{6} x^{4} y^{5}-18 x^{10} y^{5}= - 17 x^{10} y^{5}$.    
+C. $10 x^{5} y^{6}+28 x^{5} y^{6} = 20 x^{5} y^{6} $. *	     
+D. $10 x^{5} y^{6}+28 x^{5} y^{6}-18 x^{5} y^{6} = 20 x^{5} y^{6} $.
+/#
+Câu 7. Tìm phần hệ số và phần biến của đơn thức ${- 5 x^{9} y^{9} z^{10}} \cdot 8 x^{9} y^{9} z^{10}$.
+A. Phần hệ số là ${-40}$ và phần biến là ${x^{18} y^{9} z^{20}}$.   
+B. Phần hệ số là ${-5}$ và phần biến là ${x^{18} y^{9} z^{20}}$.    
+C. Phần hệ số là ${-40}$ và phần biến là ${x^{18} y^{18} z^{20}}$. *     
+D. Phần hệ số là ${8}$ và phần biến là ${x^{18} y^{18} z^{10}}$. PHẦN III. Câu trắc nghiệm trả lời ngắn.
+/#
+Câu 1. Trong các biểu thức sau biểu thức nào là đơn thức.$9 x^{4} y^{3}\quad\quad      {9 x + 3 y^{4}}\quad\quad      {9 x^{4} - 6 y^{3}}\quad\quad    \frac{9}{4}x^{5} y^{4}\quad\quad {9 x^{12} + 3 y^{4}} \quad\quad {\frac{3}{y^{4}} + \frac{9}{x^{6}}}$ $12 \quad\quad  \frac{9}{4 x + 3 y} \quad\quad  \sqrt4 x + 3 y\quad\quad  {4 x \left(3 - 9 y\right)}  \quad\quad $ $x^{4}.\frac{5}{4}\quad\quad  x^{3} - 9 \quad\quad   9 \sqrt{x}  \quad\quad $  $9 x^{7} y^{4} z^{5} $
+/#
+Câu 2. Thu gọn các đơn thức sau, tìm phần hệ số và phần biến, bậc của đơn thức đã được thu gọn:a) $15 x^{4}.5x^{5}$b) $5 x^{4}.11 x^{5} y^{5}$c) $8 x^{5}y^{5}.6 x^{7} y^{7}$d) $x^{5}y^{5}.6 x^{7} y^{7} .\frac{5}{8} xy^{9}$e) $5 x^{7}.22x^{7} y^{7} z^{8}$f) $z^{10}y^{5}.176 x^{14} y^{7}$g) $z^{10}.x^{5}y^{5}.(-6)x^{7} y^{7}\frac{{x^{8}}}{13}$
+/#
+Câu 3. Tính tích các đơn thức sau và tìm bậc của đơn thức thu được:a) ${9 x^{2}}$ và ${4 x^{2}}$b) ${2 x^{2}}$ và ${7 x^{2} y^{5}}$c) $- 5 x^{5}y^{2}$ và ${7 x^{9} y^{4}}$d) $2 x^{5}y^{2}$ và $7 x^{9} y^{4}1x^{2}y^{4}$e) ${5 x^{4}}$ và ${18 x^{9} y^{4} z^{2}}$f) ${y^{5} z^{4}}$ và ${36 x^{13} y^{4}}$g) ${z^{7}}$ và $2 x^{5}y^{2}$ và $(-7)x^{9} y^{4}\frac{{x^{2}}}{4}$
+/#
+Câu 4. Tìm tổng của các đơn thức đồng dạng:a) ${8 x^{5}}$ và ${x^{5}}$b) ${7 x^{6} y^{6}}$ và ${5 x^{6} y^{6}}$c) ${x^{6} y z^{5}}$ và ${2 x^{6} y z^{5}}$
+/#
+Câu 5. Phân thành các nhóm đơn thức đồng dạng trong các đơn thức sau:$- 6 x^{6} y \quad\quad 6 x^{7} y^{6} \quad\quad -6 \quad\quad 19 x^{6} y \quad\quad 9 x^{9} y^{4} \quad\quad - 4 x^{7} y^{6} \quad\quad - 3 x^{9} y^{4}$$7 \quad\quad 12 x^{7} y^{6} \quad\quad 6 x^{9} y^{4} \quad\quad 6 x y^{6} \quad\quad 6 xx^{4} y^{4} z^{9}$$y^{6}3 x^{4} y \quad\quad 25 x^{6} y \quad\quad 6 x^{4} y^{7} \quad\quad 4 x^{7} y^{6} \quad\quad 7 x^{5} y^{4} z^{9}$
+/#
+Câu 6. Thực hiện phép tính:a) $\quad\quad 5 x y+16 x y-11 x y $b) $\quad\quad 6 x^{4} y+9 x^{4} y-6 x^{4} y-4 x^{4} y$c) $\quad\quad 11 x^{6} y^{6}-5 x^{6} y^{6}+3 x^{6} y^{6}$d) $\quad\quad 3 x^{9} y^{6} z^{6}-11 xx^{8} y^{6} z^{6}$e) $\quad\quad  y5 x^{6} y+5 x^{6} y^{2}$f) $\quad\quad x x^{6} y^{5}+ 9 x^{7} y^{5}$
+/#
+Câu 7.  Thu gọn rồi tính giá trị của mỗi đơn thức sau:a) $8 x y^{2}$ tại $x=-1$ và $y=4$ b) $3 x^{3} x^{3} y^{2}$ tại $x=-1$ và $y=-1$ c) $- x^{4} (x^{2} y^{2})^{2}$ tại $x=-1$ và $y=-1$  d) $- x x y^{3}$ tại $x=-1$ và $y=-1$  e) $- x \left( 1 \right) x y^{3}$ tại $x=-1$ và $y=-1$  f) $- x^{3} x y^{3} z^{4}$ tại $x=-1$, $y=-1$ và $z=-1$
+/#
