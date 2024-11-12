@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="vi"><head><meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://code.jquery.com https://unpkg.com https://d3js.org https://threejs.org https://cdn.plot.ly https://stackpath.bootstrapcdn.com https://maps.googleapis.com https://cdn.tailwindcss.com https://ajax.googleapis.com https://kit.fontawesome.com https://cdn.datatables.net https://maxcdn.bootstrapcdn.com https://code.highcharts.com https://tako-static-assets-production.s3.amazonaws.com https://www.youtube.com https://fonts.googleapis.com https://fonts.gstatic.com https://pfst.cf2.poecdn.net https://i.imgur.com https://wikimedia.org https://*.icons8.com https://*.giphy.com https://picsum.photos https://images.unsplash.com; frame-src 'self' https://www.youtube.com https://trytako.com; child-src 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests; block-all-mixed-content;">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bài tập Toán 8</title>
+    <title>Tải Câu Hỏi Toán Học</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css">
     <script src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"></script>
@@ -77,13 +77,12 @@
             width: 100%;
             padding: 10px;
             margin: 10px 0;
-            font-size: 1em;
+            font-size: 1.2em;
             border: 2px solid #007BFF;
             border-radius: 5px;
         }
         .select-container {
             display: flex;
-            flex-direction: column;
             gap: 10px;
             margin-bottom: 20px;
         }
@@ -103,89 +102,63 @@
                 margin: 10px;
                 padding: 10px;
             }
+            .select-container {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Bài tập Toán 8</h1>
+        <h1>Bài tập đại số</h1>
         <div class="select-container">
-            <select id="chuong-select" onchange="updateBaiSelect()">
-                <option value="">Chọn chương</option>
+            <select id="lesson-select" onchange="updateExerciseSelect()">
+                <option value="">Chọn bài học</option>
             </select>
-            <select id="bai-select" onchange="loadExercise()">
-                <option value="">Chọn bài</option>
+            <select id="exercise-select" onchange="loadExercise()">
+                <option value="">Chọn bài tập</option>
             </select>
         </div>
         <div class="questions-container" id="questions-container"></div>
     </div>
 
     <script>
-        const toan8 = [
-            {
-                chuong: "Chương 1 - Đa thức",
-                bai: [
-                    "Bài 1 - Đơn thức",
-                    "Bài 2 - Đa thức",
-                    "Bài 3 - Phép cộng và phép trừ đa thức",
-                    "Bài 4 - Phép nhân đa thức",
-                    "Bài 5 - Phép chia đa thức cho đơn thức"
-                ]
-            },
-            {
-                chuong: "Chương 2 - Hằng đẳng thức đáng nhớ và ứng dụng",
-                bai: [
-                    "Bài 1 - Hiệu hai bình phương. Bình phương của tổng hiệu",
-                    "Bài 2 - Lập phương của một tổng hay một hiệu", 
-                    "Bài 3 - Tổng và hiệu hai lập phương",
-                    "Bài 4 - Phân tích đa thức thành nhân tử"
-                ]
-            },
-            {
-                chuong: "Chương 3 - Tứ giác",
-                bai: [
-                    "Bài 1 - Tứ giác",
-                    "Bài 2 - Hình thang cân",
-                    "Bài 3 - Hình bình hành",
-                    "Bài 4 - Hình chữ nhật", 
-                    "Bài 5 - Hình thoi và hình vuông"
-                ]
-            }
-        ];
-
         let questions = [];
+        let lessons = [];
+        const MAX_LESSONS = 10;
+        const MAX_EXERCISES = 10;
 
         window.onload = function() {
-            const chuongSelect = document.getElementById('chuong-select');
-            toan8.forEach((chuong, index) => {
+            const lessonSelect = document.getElementById('lesson-select');
+            for(let i = 1; i <= MAX_LESSONS; i++) {
                 const option = document.createElement('option');
-                option.value = index;
-                option.textContent = chuong.chuong;
-                chuongSelect.appendChild(option);
-            });
+                option.value = i;
+                option.textContent = `Chương ${i}`;
+                lessonSelect.appendChild(option);
+            }
         };
 
-        function updateBaiSelect() {
-            const chuongIndex = document.getElementById('chuong-select').value;
-            const baiSelect = document.getElementById('bai-select');
-            baiSelect.innerHTML = '<option value="">Chọn bài</option>';
+        function updateExerciseSelect() {
+            const lessonNumber = document.getElementById('lesson-select').value;
+            const exerciseSelect = document.getElementById('exercise-select');
+            exerciseSelect.innerHTML = '<option value="">Chọn bài tập</option>';
             
-            if(chuongIndex !== '') {
-                toan8[chuongIndex].bai.forEach((bai, index) => {
+            if(lessonNumber) {
+                for(let i = 1; i <= MAX_EXERCISES; i++) {
                     const option = document.createElement('option');
-                    option.value = index + 1; // Để phù hợp với tên file dữ liệu
-                    option.textContent = bai;
-                    baiSelect.appendChild(option);
-                });
+                    option.value = i;
+                    option.textContent = `Bài tập ${i}`;
+                    exerciseSelect.appendChild(option);
+                }
             }
         }
 
         function loadExercise() {
-            const chuongIndex = parseInt(document.getElementById('chuong-select').value) + 1;
-            const baiIndex = document.getElementById('bai-select').value;
+            const lessonNumber = document.getElementById('lesson-select').value;
+            const exerciseNumber = document.getElementById('exercise-select').value;
             
-            if(chuongIndex && baiIndex) {
-                const filePath = `data_math/Chương ${chuongIndex}/Bài ${baiIndex}.txt`;
+            if(lessonNumber && exerciseNumber) {
+                const filePath = `data_math/Bài ${lessonNumber}/data${exerciseNumber}.txt`;
                 fetch(filePath)
                     .then(response => {
                         if (!response.ok) {
@@ -212,6 +185,7 @@
         function checkAnswer(questionIndex, selectedAnswer, correctAnswer, feedbackElement, selectedElement) {
             const isCorrect = selectedAnswer.includes('*');
             
+            // Hiển thị feedback
             feedbackElement.style.display = 'block';
             if (isCorrect) {
                 feedbackElement.textContent = 'Đúng!';
@@ -222,6 +196,7 @@
                 feedbackElement.textContent = 'Sai!';
                 feedbackElement.className = 'feedback wrong';
                 selectedElement.classList.add('wrong');
+                // Sau 1 giây, xóa class wrong để cho phép chọn lại
                 setTimeout(() => {
                     selectedElement.classList.remove('wrong');
                 }, 1000);
@@ -238,6 +213,8 @@
 
                 const formattedQuestion = question.replace(/\$(.*?)\$/g, (match, p1) => `\\(${p1}\\)`);
                 const answers = formattedQuestion.split(/(?=[A-D]\. )/);
+
+                // Tìm đáp án đúng
                 const correctAnswer = answers.find(answer => answer.includes('*'));
 
                 const questionNumber = document.createElement('div');
