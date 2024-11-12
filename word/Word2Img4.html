@@ -1,0 +1,367 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://code.jquery.com https://unpkg.com https://d3js.org https://threejs.org https://cdn.plot.ly https://stackpath.bootstrapcdn.com https://maps.googleapis.com https://cdn.tailwindcss.com https://ajax.googleapis.com https://kit.fontawesome.com https://cdn.datatables.net https://maxcdn.bootstrapcdn.com https://code.highcharts.com https://tako-static-assets-production.s3.amazonaws.com https://www.youtube.com https://fonts.googleapis.com https://fonts.gstatic.com https://pfst.cf2.poecdn.net https://i.imgur.com https://wikimedia.org https://*.icons8.com https://*.giphy.com https://picsum.photos https://images.unsplash.com; frame-src 'self' https://www.youtube.com https://trytako.com; child-src 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests; block-all-mixed-content;">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extract and Remove Images from Word</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .dropzone {
+            border: 2px dashed #ccc;
+            border-radius: 4px;
+            padding: 20px;
+            text-align: center;
+            margin: 20px 0;
+            cursor: pointer;
+        }
+        .dropzone:hover {
+            border-color: #666;
+        }
+        .progress-container {
+            margin: 20px 0;
+            display: none;
+        }
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .progress {
+            width: 0%;
+            height: 100%;
+            background-color: #4CAF50;
+            transition: width 0.3s;
+        }
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .download-all {
+            background-color: #2196F3;
+        }
+        .remove-images {
+            background-color: #f44336;
+        }
+        .button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        #imageList {
+            margin-top: 20px;
+        }
+        .image-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .file-info {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f5f5f5;
+            border-radius: 4px;
+        }
+        .action-buttons {
+            margin: 20px 0;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h2>Extract and Remove Images from Word Document</h2>
+    <div class="dropzone" id="dropzone">
+        Drop Word file here or click to select
+        <input type="file" id="fileInput" accept=".doc,.docx" style="display: none;">
+    </div>
+
+    <div class="file-info" id="fileInfo" style="display: none">
+        <div>File name: <span id="fileName">-</span></div>
+        <div>File size: <span id="fileSize">0</span></div>
+        <div>Number of images: <span id="imageCount">0</span></div>
+    </div>
+
+    <div class="progress-container" id="progressContainer">
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+        <div id="progressText">0%</div>
+    </div>
+
+    <div class="action-buttons" id="actionButtons">
+        <button class="button download-all" id="downloadAllBtn">Download All Images (ZIP)</button>
+        <button class="button remove-images" id="removeImagesBtn">Remove Images &amp; Save Doc</button>
+    </div>
+
+    <div id="imageList"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.4.0/mammoth.browser.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/docx/7.8.2/docx.js"></script>
+    <script>
+        const CHUNK_SIZE = 1024 * 1024; // 1MB chunks
+        const MAX_FILE_SIZE = 100 * 1024 * 1024; // 100MB limit
+
+        const dropzone = document.getElementById('dropzone');
+        const fileInput = document.getElementById('fileInput');
+        const progressContainer = document.getElementById('progressContainer');
+        const progress = document.getElementById('progress');
+        const progressText = document.getElementById('progressText');
+        const fileInfo = document.getElementById('fileInfo');
+        const fileName = document.getElementById('fileName');
+        const fileSizeElement = document.getElementById('fileSize');
+        const imageCountElement = document.getElementById('imageCount');
+        const imageList = document.getElementById('imageList');
+        const actionButtons = document.getElementById('actionButtons');
+        const downloadAllBtn = document.getElementById('downloadAllBtn');
+        const removeImagesBtn = document.getElementById('removeImagesBtn');
+
+        let processingQueue = [];
+        let isProcessing = false;
+        let imageDataArray = [];
+        let currentFile = null;
+        let originalDocContent = null;
+
+        dropzone.addEventListener('click', () => fileInput.click());
+        dropzone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropzone.style.borderColor = '#666';
+        });
+        dropzone.addEventListener('dragleave', () => {
+            dropzone.style.borderColor = '#ccc';
+        });
+        dropzone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropzone.style.borderColor = '#ccc';
+            handleFile(e.dataTransfer.files[0]);
+        });
+        fileInput.addEventListener('change', (e) => handleFile(e.target.files[0]));
+
+        function formatFileSize(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+        }
+
+        function handleFile(file) {
+            if (!file) return;
+
+            if (file.size > MAX_FILE_SIZE) {
+                alert(`File too large. Maximum size is ${formatFileSize(MAX_FILE_SIZE)}`);
+                return;
+            }
+
+            currentFile = file;
+            // Reset UI and data
+            imageList.innerHTML = '';
+            imageDataArray = [];
+            progressContainer.style.display = 'block';
+            fileInfo.style.display = 'block';
+            actionButtons.style.display = 'none';
+            fileName.textContent = file.name;
+            fileSizeElement.textContent = formatFileSize(file.size);
+            
+            const reader = new FileReader();
+            reader.onload = async function(e) {
+                try {
+                    originalDocContent = e.target.result;
+                    const result = await mammoth.convertToHtml({arrayBuffer: e.target.result});
+                    
+                    // Extract images
+                    const tempDiv = document.createElement('div');
+                    tempDiv.innerHTML = result.value;
+                    const images = tempDiv.getElementsByTagName('img');
+                    
+                    imageCountElement.textContent = images.length;
+                    processingQueue = Array.from(images);
+                    
+                    if (processingQueue.length > 0) {
+                        actionButtons.style.display = 'block';
+                        processNextImage();
+                    } else {
+                        progressContainer.style.display = 'none';
+                        alert('No images found in the document');
+                    }
+                } catch (error) {
+                    console.error('Error processing file:', error);
+                    alert('Error processing file: ' + error.message);
+                }
+            };
+
+            reader.onprogress = function(e) {
+                if (e.lengthComputable) {
+                    const percentComplete = (e.loaded / e.total) * 100;
+                    progress.style.width = percentComplete + '%';
+                    progressText.textContent = Math.round(percentComplete) + '%';
+                }
+            };
+
+            reader.readAsArrayBuffer(file);
+        }
+
+        async function processNextImage() {
+            if (processingQueue.length === 0 || isProcessing) return;
+
+            isProcessing = true;
+            const img = processingQueue.shift();
+            const index = document.querySelectorAll('.image-item').length + 1;
+
+            try {
+                // Store image data
+                imageDataArray.push({
+                    index: index,
+                    src: img.src
+                });
+
+                const imageItem = document.createElement('div');
+                imageItem.className = 'image-item';
+                imageItem.innerHTML = `
+                    <span>Image ${index}</span>
+                    <button class="button" onclick="downloadImage('${img.src}', ${index})">
+                        Download ${index}.png
+                    </button>
+                `;
+                imageList.appendChild(imageItem);
+
+                // Update progress
+                const totalImages = parseInt(imageCountElement.textContent);
+                const percentComplete = ((index) / totalImages) * 100;
+                progress.style.width = percentComplete + '%';
+                progressText.textContent = Math.round(percentComplete) + '%';
+
+                if (processingQueue.length > 0) {
+                    setTimeout(processNextImage, 100); // Add delay between processing
+                } else {
+                    progressContainer.style.display = 'none';
+                }
+            } catch (error) {
+                console.error('Error processing image:', error);
+            }
+
+            isProcessing = false;
+        }
+
+        function downloadImage(base64String, index) {
+            const link = document.createElement('a');
+            link.href = base64String;
+            link.download = `${index}.png`;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        downloadAllBtn.addEventListener('click', async () => {
+            if (imageDataArray.length === 0) {
+                alert('No images to download');
+                return;
+            }
+
+            downloadAllBtn.disabled = true;
+            downloadAllBtn.textContent = 'Creating ZIP...';
+
+            try {
+                const zip = new JSZip();
+                
+                // Add each image to the zip file
+                for (let i = 0; i < imageDataArray.length; i++) {
+                    const imgData = imageDataArray[i];
+                    const base64Data = imgData.src.split(',')[1];
+                    zip.file(`${imgData.index}.png`, base64Data, {base64: true});
+                }
+
+                // Generate and download the zip file
+                const zipContent = await zip.generateAsync({type: 'blob'});
+                const zipUrl = URL.createObjectURL(zipContent);
+                const link = document.createElement('a');
+                link.href = zipUrl;
+                link.download = 'images.zip';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                URL.revokeObjectURL(zipUrl);
+            } catch (error) {
+                console.error('Error creating zip:', error);
+                alert('Error creating zip file: ' + error.message);
+            }
+
+            downloadAllBtn.disabled = false;
+            downloadAllBtn.textContent = 'Download All Images (ZIP)';
+        });
+
+        removeImagesBtn.addEventListener('click', async () => {
+            if (!currentFile || !originalDocContent) {
+                alert('Please load a document first');
+                return;
+            }
+
+            removeImagesBtn.disabled = true;
+            removeImagesBtn.textContent = 'Processing...';
+
+            try {
+                const result = await mammoth.convertToHtml({arrayBuffer: originalDocContent});
+                
+                // Create new document with images removed
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = result.value;
+                const images = tempDiv.getElementsByTagName('img');
+                Array.from(images).forEach(img => img.remove());
+
+                // Convert HTML back to docx
+                const docx = await createDocxFromHtml(tempDiv.innerHTML);
+                
+                // Download new document
+                const docBlob = await docx.save();
+                const docUrl = URL.createObjectURL(docBlob);
+                const link = document.createElement('a');
+                link.href = docUrl;
+                const newFileName = currentFile.name.replace('.docx', '_no_images.docx');
+                link.download = newFileName;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                URL.revokeObjectURL(docUrl);
+
+                alert('Document processed successfully! Images have been removed.');
+            } catch (error) {
+                console.error('Error removing images:', error);
+                alert('Error removing images: ' + error.message);
+            }
+
+            removeImagesBtn.disabled = false;
+            removeImagesBtn.textContent = 'Remove Images & Save Doc';
+        });
+
+        async function createDocxFromHtml(html) {
+            const doc = new docx.Document({
+                sections: [{
+                    properties: {},
+                    children: [
+                        new docx.Paragraph({
+                            children: [
+                                new docx.TextRun(html.replace(/<[^>]*>/g, ''))
+                            ]
+                        })
+                    ]
+                }]
+            });
+            return doc;
+        }
+    </script>
+
+
+</body></html>

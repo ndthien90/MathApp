@@ -28,6 +28,14 @@
             background-color: white;
             border-radius: 5px;
         }
+        .question-image {
+            max-width: 40%;
+            height: auto;
+            margin: 10px 0;
+            display: block;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
         .question-block {
             margin: 20px 0;
             padding: 15px;
@@ -150,10 +158,20 @@
                     "Bài 4 - Hình chữ nhật", 
                     "Bài 5 - Hình thoi và hình vuông"
                 ]
-            }
+            },
+            {
+                chuong: "Chương 4 - Định lý Thales",
+                bai: [
+                    "Bài 1 - Định lý Thales trong tam giác",
+                    "Bài 2 - Đường trung bình của tam giác", 
+                    "Bài 3 - Tính chất đường phân giác của tam giác"
+                ]
+              }
         ];
 
         let questions = [];
+        let currentChapter;
+        let currentLesson;
 
         window.onload = function() {
             const chuongSelect = document.getElementById('chuong-select');
@@ -173,35 +191,32 @@
             if(chuongIndex !== '') {
                 toan8[chuongIndex].bai.forEach((bai, index) => {
                     const option = document.createElement('option');
-                    option.value = index + 1; // Để phù hợp với tên file dữ liệu
+                    option.value = index + 1;
                     option.textContent = bai;
                     baiSelect.appendChild(option);
                 });
             }
         }
 
-        function loadExercise() {
-            const chuongIndex = parseInt(document.getElementById('chuong-select').value) + 1;
-            const baiIndex = document.getElementById('bai-select').value;
+        async function loadExercise() {
+            currentChapter = parseInt(document.getElementById('chuong-select').value) + 1;
+            currentLesson = document.getElementById('bai-select').value;
             
-            if(chuongIndex && baiIndex) {
-                const filePath = `data_math/Chương ${chuongIndex}/Bài ${baiIndex}.txt`;
-                fetch(filePath)
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error('Không tìm thấy file bài tập');
-                        }
-                        return response.text();
-                    })
-                    .then(data => {
-                        processQuestions(data);
-                        displayAllQuestions();
-                    })
-                    .catch(error => {
-                        console.error('Error loading data:', error);
-                        document.getElementById('questions-container').innerHTML = 
-                            '<p style="color: red;">Không thể tải bài tập. Vui lòng thử lại sau.</p>';
-                    });
+            if(currentChapter && currentLesson) {
+                const filePath = `data_math/Chương ${currentChapter}/Bài ${currentLesson}.txt`;
+                try {
+                    const response = await fetch(filePath);
+                    if (!response.ok) {
+                        throw new Error('Không tìm thấy file bài tập');
+                    }
+                    const data = await response.text();
+                    processQuestions(data);
+                    displayAllQuestions();
+                } catch (error) {
+                    console.error('Error loading data:', error);
+                    document.getElementById('questions-container').innerHTML = 
+                        '<p style="color: red;">Không thể tải bài tập. Vui lòng thử lại sau.</p>';
+                }
             }
         }
 
@@ -209,34 +224,24 @@
             questions = fileContent.trim().split('/#').map(block => block.trim()).filter(block => block);
         }
 
-        function checkAnswer(questionIndex, selectedAnswer, correctAnswer, feedbackElement, selectedElement) {
-            const isCorrect = selectedAnswer.includes('*');
-            
-            feedbackElement.style.display = 'block';
-            if (isCorrect) {
-                feedbackElement.textContent = 'Đúng!';
-                feedbackElement.className = 'feedback correct';
-                selectedElement.classList.add('correct');
-                selectedElement.style.pointerEvents = 'none';
-            } else {
-                feedbackElement.textContent = 'Sai!';
-                feedbackElement.className = 'feedback wrong';
-                selectedElement.classList.add('wrong');
-                setTimeout(() => {
-                    selectedElement.classList.remove('wrong');
-                }, 1000);
+        async function checkImageExists(imagePath) {
+            try {
+                const response = await fetch(imagePath, { method: 'HEAD' });
+                return response.ok;
+            } catch {
+                return false;
             }
         }
 
-        function displayAllQuestions() {
+        async function displayAllQuestions() {
             const container = document.getElementById('questions-container');
             container.innerHTML = '';
 
-            questions.forEach((question, index) => {
+            for(let index = 0; index < questions.length; index++) {
                 const questionBlock = document.createElement('div');
                 questionBlock.className = 'question-block';
 
-                const formattedQuestion = question.replace(/\$(.*?)\$/g, (match, p1) => `\\(${p1}\\)`);
+                const formattedQuestion = questions[index].replace(/\$(.*?)\$/g, (match, p1) => `\\(${p1}\\)`);
                 const answers = formattedQuestion.split(/(?=[A-D]\. )/);
                 const correctAnswer = answers.find(answer => answer.includes('*'));
 
@@ -249,6 +254,18 @@
                 questionContent.className = 'formula';
                 questionContent.innerHTML = answers[0];
                 questionBlock.appendChild(questionContent);
+
+                // Kiểm tra và thêm hình ảnh nếu có
+                const imagePath = `data_math/Chương ${currentChapter}/img${currentLesson}/${index + 1}.png`;
+                const imageExists = await checkImageExists(imagePath);
+                
+                if (imageExists) {
+                    const imageElement = document.createElement('img');
+                    imageElement.src = imagePath;
+                    imageElement.className = 'question-image';
+                    imageElement.alt = `Hình minh họa câu ${index + 1}`;
+                    questionBlock.appendChild(imageElement);
+                }
 
                 const answerOptions = document.createElement('div');
                 answerOptions.className = 'answer-options';
@@ -275,7 +292,26 @@
                     delimiters: [{left: '\\(', right: '\\)', display: false}],
                     throwOnError: false
                 });
-            });
+            }
+        }
+
+        function checkAnswer(questionIndex, selectedAnswer, correctAnswer, feedbackElement, selectedElement) {
+            const isCorrect = selectedAnswer.includes('*');
+            
+            feedbackElement.style.display = 'block';
+            if (isCorrect) {
+                feedbackElement.textContent = 'Đúng!';
+                feedbackElement.className = 'feedback correct';
+                selectedElement.classList.add('correct');
+                selectedElement.style.pointerEvents = 'none';
+            } else {
+                feedbackElement.textContent = 'Sai!';
+                feedbackElement.className = 'feedback wrong';
+                selectedElement.classList.add('wrong');
+                setTimeout(() => {
+                    selectedElement.classList.remove('wrong');
+                }, 1000);
+            }
         }
     </script>
 
