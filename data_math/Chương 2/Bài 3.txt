@@ -1,181 +1,62 @@
 
-Câu 1. Khai triển biểu thức sau theo hằng đẳng thức  ${\left(3 x + 2 y\right)^{3}}$ bằng 
-
-A. ${27 x^{3} + 54 x^{2} y + 36 x y^{2} + 8 y^{3}}$ . *	   
-
-B. ${27 x^{3} - 54 x^{2} y + 36 x y^{2} - 8 y^{3}}$ . 
-
-C. ${27 x^{3} - 54 x^{2} y + 36 x y^{2} + 8 y^{3}}$ .	     
-
-D. ${27 x^{3} + 54 x^{2} y - 36 x y^{2} + 8 y^{3}}$ .
 /#
-Câu 2. Khai triển biểu thức sau theo hằng đẳng thức  ${\left(2 - x\right)^{3}}$ bằng  
-
-A. ${x^{3} + 6 x^{2} + 12 x + 8}$ .	   
-
-B. ${- x^{3} + 6 x^{2} - 12 x + 8}$ . *     
-
-C. ${- x^{3} - 6 x^{2} - 12 x + 8}$ .	     
-
-D. ${- x^{3} + 6 x^{2} + 12 x + 8}$ .
+Câu 1. Khai triển  ${27 - x^{3}}$  ta được  
+A. $(x + 3)(x^{2} + 3 x + 9)$  .	   
+B. $(x + 3)(x^{2} - 3 x + 9)$  .    
+C. $(3 - x)(x^{2} - 3 x + 9)$ .	     
+D. $(3 - x)(x^{2} + 3 x + 9)$ . *
 /#
-Câu 3. Khai triển biểu thức sau theo hằng đẳng thức  ${\left(2 - 3 x\right)^{3}}$ bằng 
-
-A. ${- 27 x^{3} + 54 x^{2} + 36 x + 8}$ .	   
-
-B. ${- 27 x^{3} - 54 x^{2} - 36 x + 8}$ .     
-
-C. ${27 x^{3} + 54 x^{2} + 36 x + 8}$ .	     
-
-D. ${- 27 x^{3} + 54 x^{2} - 36 x + 8}$ . *
+Câu 2.  Khai triển ${27 x^{3} + 8}$  ta được  
+A. $(3 x - 2)(9 x^{2} - 6 x + 4) $ .	   
+B. $(3 x + 2)(9 x^{2} + 6 x + 4) $ .    
+C. $(3 x - 2)(9 x^{2} + 6 x + 4) $.	     
+D. $(3 x + 2)(9 x^{2} - 6 x + 4) $. *
 /#
-Câu 4. Biểu thức $x^{3} - 6 x^{2} + 12 x - 8$ bằng  
-
-A. ${\left(x + 1\right)^{3}} $ .	   
-
-B. ${\left(x - 2\right)^{3}} $ . *     
-
-C. ${\left(x - 4\right)^{3}} $ .	     
-
-D. ${\left(x - 6\right)^{3}} $ .
+Câu 3. Biểu thức  $(4 - x)(x^{2} + 4 x + 16)$ bằng 
+A. ${- x^{3} - 64} $ .	   
+B. ${64 - x^{3}} $ . *	    
+C. ${x^{3} + 64} $ .	     
+D. ${x^{3} - 64} $ .
 /#
-Câu 5.  Biểu thức ${- 64 x^{3} + 96 x^{2} - 48 x + 8}$ bằng  
-
-A. ${- 64 x^{3}}$.	   
-
-B. ${\left(- 4 x - 6\right)^{3}}$ .     
-
-C. ${\left(- 4 x - 4\right)^{3}}$ .	     
-
-D. ${\left(2 - 4 x\right)^{3}}$ . *
-/#
-Câu 6.  Biểu thức ${- 27 x^{3} + 108 x^{2} - 144 x + 64}$ bằng  
-
-A. ${\left(4 - 3 x\right)^{3}}$ . *	   
-
-B. ${\left(3 - 3 x\right)^{3}}$.     
-
-C. ${\left(- 3 x - 3\right)^{3}}$ .	     
-
-D. ${\left(- 3 x - 2\right)^{3}}$ .
-/#
-Câu 7. Rút gọn biểu thức sau  ${\left(2 x - 3\right)^{3} - \left(2 x + 3\right)^{3}}$   
-
-A. ${72 x^{2} - 54}$ .	   
-
-B. ${- 12 x^{2} - 54}$.     
-
-C. ${- 72 x^{2} - 54}$. *	     
-
-D. ${48 x^{2} - 54}$ .
-/#
-Câu 8. Rút gọn biểu thức sau ${\left(3 x - 2 y\right)^{3} + \left(3 x + 2 y\right)^{3}} $   
-
-A. ${54 x^{3} - 48 x y^{2}}$.	   
-
-B. ${54 x^{3} - 72 x y^{2}}$.     
-
-C. ${54 x^{3} + 72 x y^{2}}$ . *	     
-
-D. ${54 x^{3} + 48 x y^{2}}$ .
-/#
-Câu 9. Rút gọn biểu thức sau ${\left(x - 2\right)^{3} + \left(x + 2\right)^{3}}$   
-
-A. ${2 x^{3} - 24 x}$ .	   
-
-B. ${2 x^{3} - 32 x}$.     
-
-C. ${2 x^{3} + 32 x}$.	     
-
-D. ${2 x^{3} + 24 x}$ . *
-/#
-Câu 10. Rút gọn biểu thức sau ${27 x^{2} \left(x + 1\right) + \left(- 3 x - 1\right)^{3}}$  
-A. ${- 9 x - 1}$ . *	   
-B. ${1 - 9 x}$ .     
-C. ${1 - 3 x}$.	     
-D. ${- 3 x - 1}$.
-/#
-Câu 11. Rút gọn biểu thức sau ${- x^{2} \left(x + 1\right) + \left(x + \frac{1}{3}\right)^{3}}$  
-A. ${\frac{x}{9} + \frac{1}{27}}$.	   
-B. ${\frac{x}{3} - \frac{1}{27}}$ .     
-C. ${\frac{x}{3} + \frac{1}{27}}$ . *	     
-D. ${\frac{x}{9} - \frac{1}{27}}$.
-/#
-Câu 12. Rút gọn biểu thức sau  ${- 27 x \left(x + 1\right)^{2} + \left(3 x + 2\right)^{3}}$   
-A. ${9 x - 8}$ .	   
-B. ${- 15 x - 8}$ .     
-C. ${9 x + 8}$. *	     
-D. ${8 - 15 x}$.
-/#
-Câu 13. Rút gọn biểu thức ${3 x^{2} - x \left(x - 1\right) \left(x + 1\right) + \left(x - 1\right)^{3} + 1}$ được   
-A. ${- 4 x}$ .	   
-B. ${4 x}$. *     
-C. ${- x}$.	     
-D. ${x}$.
-/#
-Câu 14. Rút gọn biểu thức ${- x \left(x - 2\right) \left(x + 2\right) - 16 x + \left(x - 2\right)^{3} + 8}$ được  
-A. ${6 x^{2}}$ .	   
-B. ${- 2 x^{2}}$ .     
-C. ${- 6 x^{2}}$. *	     
-D. ${2 x^{2}}$ .
-/#
-Câu 15.  Rút gọn biểu thức ${- 48 x y - 3 x \left(x - 2 y\right) \left(x + 2 y\right) - 8 y^{3} + \left(3 x + 2 y\right)^{3}}$ được   
-A. ${- 54 x^{2} y}$.	   
-B. ${18 x^{2} y}$.     
-C. ${- 18 x^{2} y}$.	     
-D. ${54 x^{2} y}$. *
-/#
-Câu 16. Rút gọn biểu thức sau ${\left(x - 2 y\right)^{3} + \left(x + 2 y\right)^{3}} $   
-A. ${2 x^{3} + 8 x y^{2}}$ .	   
-B. ${2 x^{3} - 4 x y^{2}}$.     
-C. ${2 x^{3} + 24 x y^{2}}$ . *	     
-D. ${2 x^{3} - 24 x y^{2}}$.
-/#
-Câu 17. Rút gọn biểu thức sau  ${\left(x - 2\right)^{3} - \left(x + 2\right)^{3}}$   
-A. ${- 12 x^{2} - 16}$. *	   
-B. ${- 10 x^{2} - 16}$.     
-C. ${12 x^{2} - 16}$ .	     
-D. ${6 x^{2} - 16}$ .
-/#
-Câu 18. Rút gọn biểu thức sau ${\left(3 x - 2 y\right)^{3} + \left(3 x + 2 y\right)^{3}} $   
-A. ${54 x^{3} + 24 x y^{2}}$ .	   
-B. ${54 x^{3} - 36 x y^{2}}$.     
-C. ${54 x^{3} - 72 x y^{2}}$.	     
-D. ${54 x^{3} + 72 x y^{2}}$ . *
-/#
-Câu 19. Khai triển  ${8 x^{3} + 27}$  ta được    
-A. $(2 x + 3)(4 x^{2} - 6 x + 9)$ . *	   
-B. $(2 x + 3)(4 x^{2} + 6 x + 9)$ .     
-C. $(3 - 2 x)(4 x^{2} + 6 x + 9)$  .	     
-D. $(3 - 2 x)(4 x^{2} - 6 x + 9)$  .
-/#
-Câu 20. Biểu thức  $(1 - x)(x^{2} + x + 1)$ bằng   
-A. ${1 - x^{3}} $ . *	   
+Câu 4. Biểu thức  $(1 - x)(x^{2} + x + 1)$ bằng 
+A. ${- x^{3} - 1} $ .	   
 B. ${x^{3} - 1} $ .	    
-C. ${- x^{3} - 1} $ .	     
+C. ${1 - x^{3}} $ . *	     
 D. ${x^{3} + 1} $ .
 /#
-Câu 21. Biểu thức  $(2 x^{2} + 4 y)(4 x^{4} - 8 x^{2} y + 16 y^{2})$ bằng   
-A. ${8 x^{6} - 64 y^{3}} $ .	   
-B. ${- 8 x^{6} - 64 y^{3}} $ .	    
-C. ${8 x^{6} + 64 y^{3}} $ . *	     
-D. ${- 8 x^{6} + 64 y^{3}} $ .
+Câu 5. Biểu thức  $(2 x + 2)(4 x^{2} - 4 x + 4)$ bằng 
+A. ${- 8 x^{3} - 8} $ .	   
+B. ${8 - 8 x^{3}} $ .	    
+C. ${8 x^{3} + 8} $ . *	     
+D. ${8 x^{3} - 8} $ .
 /#
-Câu 22. Rút gọn biểu thức $(x + 3)(x^{2} - 3 x + 9)-\left(x + 3\right)^{3}$ sẽ được  
-A. ${- 9 x^{2} - 27 x }$ . *	   
-B. ${9 x^{2} - 27 x }$.	    
-C. ${9 x^{2} + 27 x }$ .	     
-D. ${- 9 x^{2} + 27 x }$.
+Câu 6. Biểu thức  $(4 x + 4)(16 x^{2} - 16 x + 16)$ bằng 
+A. ${64 - 64 x^{3}} $ .	   
+B. ${64 x^{3} - 64} $ .	    
+C. ${64 x^{3} + 64} $ . *	     
+D. ${- 64 x^{3} - 64} $ .
 /#
-Câu 23. Rút gọn biểu thức  $(x - 1)(x^{2} + x + 1)-(x^{3} - 10)$ sẽ được   
-A. ${10}$ .	   
-B. ${5}$.     
-C. ${9}$ . *	     
-D. ${-4}$ .
+Câu 7. Rút gọn biểu thức $(x - 1)(x^{2} + x + 1)-x \left(x - 2\right) \left(x + 2\right)$ sẽ được
+A. ${1 - 4 x}$ .	   
+B. ${4 x - 1}$. *	    
+C. ${- 4 x - 1}$ .	     
+D. ${4 x + 1}$.
 /#
-Câu 24.  Chọn khẳng định đúng trong các khẳng định sau:  
-A. $\left(3 n - 6\right)^{3} + 216$  không chia hết cho ${3}$ với mọi $n \in \mathbb{Z}$.	   
-B. $\left(12 n - 6\right)^{3} + 216$ không chia hết cho ${12}$ với mọi $n \in \mathbb{Z}$ .     
-C. $\left(3 - 5 n\right)^{3} - 27$ không chia hết cho ${5}$ với mọi $n \in \mathbb{Z}$.	     
-D. $\left(3 n - 6\right)^{3} + 216$ chia hết cho ${3}$ với mọi $n \in \mathbb{Z}$. *
+Câu 8. Rút gọn biểu thức $(x + 4)(x^{2} - 4 x + 16)-x \left(x - 1\right)^{2}+x(1 - 2 x)$ sẽ được
+A. ${-64}$ .	   
+B. ${64}$. *    
+C. ${-128}$.	     
+D. ${128}$ .
+/#
+Câu 9.  Chọn khẳng định đúng trong các khẳng định sau:
+A. $\left(4 n - 3\right)^{3} + 27$ không chia hết cho ${4}$ với mọi $n \in \mathbb{Z}$.	   
+B. $\left(7 n - 3\right)^{3} + 27$ chia hết cho ${7}$ với mọi $n \in \mathbb{Z}$. *    
+C. $\left(7 n - 3\right)^{3} + 27$  không chia hết cho ${7}$ với mọi $n \in \mathbb{Z}$.	     
+D. $\left(16 n - 3\right)^{3} + 27$ không chia hết cho ${16}$ với mọi $n \in \mathbb{Z}$ . PHẦN III. Câu trắc nghiệm trả lời ngắn.
+/#
+Câu 1. Triển khai biểu thức sau theo hằng đẳng thức:  a) $x^{3} - 1 \quad\quad$ b) $64 - x^{3} \quad\quad$ c) $27 x^{3} + 8 \quad\quad$ d) $8 - 64 x^{3} \quad\quad$ e) $27 x^{3} + 8 y^{3} \quad\quad$
+/#
+Câu 2. Viết thành vế kia của hằng đẳng thức:  a) $(x + 2)(x^{2} - 2 x + 4)\quad\quad$ b) $(3 - x)(x^{2} + 3 x + 9)\quad\quad$ c) $(2 x + 3)(4 x^{2} - 6 x + 9) $d) $(3 - 2 x)(4 x^{2} + 6 x + 9) \quad\quad$e) $(x + 3 y)(x^{2} - 3 x y + 9 y^{2})\quad\quad$ f) $(x^{2} + 3 y)(x^{4} - 3 x^{2} y + 9 y^{2})$
+/#
+Câu 3.  Rút gọn biểu thức sau: a) $(x + 3)(x^{2} - 3 x + 9)-(x^{3} - 5)$b) $(x + 3)(x^{2} - 3 x + 9)-\left(x + 3\right)^{3}$c) $(x + 1)(x^{2} - x + 1)-x \left(x - 2\right) \left(x + 2\right)$d) $(1 - x)(x^{2} + x + 1)+(x + 3)(x^{2} - 3 x + 9)$e) $(x + 3)(x^{2} - 3 x + 9)-x \left(x + 3\right)^{2}+x(6 x + 9)$f) $(x + y)(x^{2} - x y + y^{2})-(x + y)(x^{2} - x y + y^{2})$
 /#
